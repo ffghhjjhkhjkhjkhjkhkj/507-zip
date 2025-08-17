@@ -15,6 +15,11 @@
 
 ![Демонстрация 507-zip](https://raw.githubusercontent.com/ffghhjjhkhjkhjkhjkhkj/507-zip/main/screenshots/изображение.png)
 
+-------------------------------------------------------------------------------------------------------
+
+**Сравнение с аналогами:**
+
+![Таблица](https://raw.githubusercontent.com/ffghhjjhkhjkhjkhjkhkj/507-zip/main/screenshots/Таблица.png)
 
 -------------------------------------------------------------------------------------------------------
 
