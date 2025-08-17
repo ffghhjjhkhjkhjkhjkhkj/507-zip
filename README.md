@@ -5,6 +5,10 @@
 [![Version](https://img.shields.io/badge/Version-1.1.0-red)](https://github.com/ffghhjjhkhjkhjkhjkhkj/507-zip/releases)
 [![Platform](https://img.shields.io/badge/Platform-Linux-FCC624?logo=linux)](https://linux.org)
 
+-------------------------------------------------------------------------------------------------------
+**Описание:**
+Это простой но мощный архиватор на базе 
+[![Python](https://img.shields.io/badge/Python-3.9+-blue?logo=python&logoColor=white)](https://www.python.org) он весит всего несколько мегабайт
 
 Этот проект был создан: 16.08.2025
 Последнее обновление: 17.08.2025
