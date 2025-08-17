@@ -1,4 +1,6 @@
 import os
+import sys
+
 print("Добро пожаловать в инструмент для управления архивами 507-zip! от 507-team")
 print("")
 print("Выберите действие:")
@@ -14,7 +16,7 @@ if choice == "1":
     print("")
     tiparchiveforextract = input()
     if tiparchiveforextract == "1":
-        print("Наишите название файла архива:")
+        print("Напишите название файла архива:")
         print("ВНИМАНИЕ!: ПОСЛЕ ЭТОГО ЕСЛИ В АРХИВЕ БЫЛИ ФАЙЛЫ КОТОРЫЕ НАЗЫВАЛИСЬ ТАКЖЕ КАК И В ЭТОЙ ДИРЕКТОРИИ ОНИ БУДУТ ПЕРЕЗАПИСАНЫ!")
         namearchiveforextract = input()
         print("")
@@ -23,6 +25,10 @@ if choice == "1":
         os.system("unzip -l " + namearchiveforextract)
         print("------------------------------------------------------")
         print("")
+        if not os.path.exists(namearchiveforextract):
+            print("Стоп а точно ли ты правильно ввел название? а то архива то такого тут нет!")
+            print("Выход. Код: 2")
+            sys.exit(2)
         print("И последнее... Создать подпапку? Y/N")
         cozdatpodpapkyforextract = input()
         podpapkaforextract = namearchiveforextract.replace(".zip", "")
@@ -30,14 +36,34 @@ if choice == "1":
         if cozdatpodpapkyforextract == "y":
             print("Создаю...")
             os.system("mkdir " + podpapkaforextract)
-            print("Папка создана!")
+            print("Папка " + podpapkaforextract + " создана!")
             print("Распаковываю....")
-            os.system("unzip -o -q " + namearchiveforextract + " -d " + podpapkaforextract)
+            outputofcommandinextracttwithcozdatpodpapky = os.popen("unzip -o " + namearchiveforextract + " -d " + podpapkaforextract + " 2>&1").read()
+            if "bad zipfile offset" in outputofcommandinextracttwithcozdatpodpapky:
+                print("Ой.... архив поврежден!")
+                print("")
+                print("Лог (для анализа):")
+                print("----------------------------------------------------")
+                print(outputofcommandinextracttwithcozdatpodpapky)
+                print("----------------------------------------------------")
+                print("")
+                print("Выход")
+                print("Выход. Код: 3")
+                sys.exit(3)
             print("Распаковка завершена!")
             print("")
             print("--------------------------------------------------------")
             print("Список файлов/каталогов:")
             os.system("dir " + podpapkaforextract)
             print("--------------------------------------------------------")
+            print("")
+            print("Удачи!")
+
+
+        if cozdatpodpapkyforextract == "n":
+            print("Окей! расспаковываю в эту директорию")
+            print("Распаковываю....")
+            os.system("unzip -o -q " + namearchiveforextract)
+            print("Распаковка завершена!")
             print("")
             print("Удачи!")
