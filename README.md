@@ -12,6 +12,7 @@
 
 ![Демонстрация 507-zip](https://raw.githubusercontent.com/ffghhjjhkhjkhjkhjkhkj/507-zip/main/screenshots/изображение.png)
 
+-------------------------------------------------------------------------------------------------------
 
 **Как собрать из исходников?:**
 Что бы собрать из исходников надо выполнить следующее
@@ -19,6 +20,8 @@
 1.Выполнить wget https://raw.githubusercontent.com/ffghhjjhkhjkhjkhjkhkj/507-zip/refs/heads/main/main.py
 2.Выполнить pip install pyinstaller
 3.Выполнить pyinstaller --onefile main.py
+
+-------------------------------------------------------------------------------------------------------
 
 **Установка:**
 
