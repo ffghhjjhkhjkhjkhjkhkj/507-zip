@@ -6,6 +6,8 @@
 
 Скриншоты:
 
+![Демонстрация 507-zip](https://raw.githubusercontent.com/ffghhjjhkhjkhjkhjkhkj/507-zip/main/screenshots/изображение.png)
+
 Установка: `wget https://github.com/ffghhjjhkhjkhjkhjkhkj/507-zip/releases/download/v1.1/507-zip && chmod +x 507-zip && sudo mv -f 507-zip /usr/bin/ && echo "Готово!"
 `
 
