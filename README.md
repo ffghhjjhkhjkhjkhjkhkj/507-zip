@@ -2,7 +2,7 @@
 
 [![Python](https://img.shields.io/badge/Python-3.9+-blue?logo=python&logoColor=white)](https://www.python.org)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
-[![Version](https://img.shields.io/badge/Version-1.1.0-red)](https://github.com/ffghhjjhkhjkhjkhjkhkj/507-zip/releases)
+[![Version](https://img.shields.io/badge/Version-1.2.0-red)](https://github.com/ffghhjjhkhjkhjkhjkhkj/507-zip/releases)
 [![Platform](https://img.shields.io/badge/Platform-Linux-FCC624?logo=linux)](https://linux.org)
 
 -------------------------------------------------------------------------------------------------------
