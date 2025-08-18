@@ -1,4 +1,6 @@
-Добро пожаловать в мой первый серьезный проект!
+Welcome to my first serious project!
+
+Если вы русский идите в branch "main"  
 
 [![Python](https://img.shields.io/badge/Python-3.9+-blue?logo=python&logoColor=white)](https://www.python.org)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
@@ -6,58 +8,51 @@
 [![Platform](https://img.shields.io/badge/Platform-Linux-FCC624?logo=linux)](https://linux.org)
 
 -------------------------------------------------------------------------------------------------------
-**Описание:**
-Это простой но мощный архиватор на базе 
-[![Python](https://img.shields.io/badge/Python-3.9+-blue?logo=python&logoColor=white)](https://www.python.org) он весит всего несколько мегабайт
+**Description:**
+This is a simple but powerful archiver based on
+[![Python](https://img.shields.io/badge/Python-3.9+-blue?logo=python&logoColor=white)](https://www.python.org) it weighs only a few megabytes
 
-Этот проект был создан: 16.08.2025
-Последнее обновление: 18.08.2025
-
--------------------------------------------------------------------------------------------------------
-
-**Скриншоты:**
-
-![Демонстрация 507-zip](https://raw.githubusercontent.com/ffghhjjhkhjkhjkhjkhkj/507-zip/main/screenshots/изображение.png)
-
-![Еще демонстрация 507-zip](https://raw.githubusercontent.com/ffghhjjhkhjkhjkhjkhkj/507-zip/main/screenshots/еще_скриншот.png)
+This project was created: 08/16/2025
+Last updated: 08/18/2025
 
 -------------------------------------------------------------------------------------------------------
 
-**Сравнение с аналогами:**
+**Screenshots:**
 
-![Таблица](https://raw.githubusercontent.com/ffghhjjhkhjkhjkhjkhkj/507-zip/main/screenshots/Таблица.png)
-
--------------------------------------------------------------------------------------------------------
-
-**Пример работы:**
-
-![Пример работы](https://raw.githubusercontent.com/ffghhjjhkhjkhjkhjkhkj/507-zip/main/screenshots/output.gif)
-
+Not yet :(
 
 -------------------------------------------------------------------------------------------------------
 
-**Как собрать из исходников?:**
-Что бы собрать из исходников надо выполнить следующее
+**Comparison with analogues:**
 
-1.Выполнить wget https://raw.githubusercontent.com/ffghhjjhkhjkhjkhjkhkj/507-zip/refs/heads/main/main.py
+Not yet :(
 
-2.Выполнить pip install pyinstaller
+-------------------------------------------------------------------------------------------------------
 
-3.Выполнить pyinstaller --onefile main.py
+**Example of work:**
+
+Not yet :(
+
+-------------------------------------------------------------------------------------------------------
+
+**How to compile from source?:**
+To compile from source you need to do the following
+
+1.Execute wget https://raw.githubusercontent.com/ffghhjjhkhjkhjkhjkhkj/507-zip/refs/heads/main/main.py
+
+2.Execute pip install pyinstaller
+
+3.Execute pyinstaller --onefile main.py
 
 -------------------------------------------------------------------------------------------------------
 
 **Установка:**
 
-Для установки 507-zip надо выполнить: `wget https://github.com/ffghhjjhkhjkhjkhjkhkj/507-zip/releases/download/v1.2/507-zip && chmod +x 507-zip && sudo mv -f 507-zip /usr/bin/ && echo "Готово!"
-`
-Это скачает бинарник проекта даст ему права и распакует в /usr/bin
-
-Для последующего запуска: `507-zip` (в любой директории)
+Not yet :(
 
 
 -------------------------------------------------------------------------------------------------------
 
 
-**Статистика разработчика:**
+**Developer statistics:**
 [![Статистика разработчика](https://github-readme-stats.vercel.app/api?username=ffghhjjhkhjkhjkhjkhkj&show_icons=true&theme=radical)](https://github.com/ffghhjjhkhjkhjkhjkhkj)
