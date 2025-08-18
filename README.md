@@ -1,6 +1,6 @@
 Welcome to my first serious project!
 
-Если вы русский идите в branch "main"  
+Если вы русский идите в branch "main"
 
 [![Python](https://img.shields.io/badge/Python-3.9+-blue?logo=python&logoColor=white)](https://www.python.org)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
