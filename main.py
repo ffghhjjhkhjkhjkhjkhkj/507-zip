@@ -1,5 +1,22 @@
 import os
 import sys
+import traceback
+import resource
+
+resource.setrlimit(resource.RLIMIT_AS, (1_000_000_000, 1_000_000_000))  # 1 ГБ RAM
+
+
+def global_exception_handler(exc_type, exc_value, exc_traceback):
+         print("Ой. Извините но 507-zip словил неисправимую ошибку!")
+         print("Пожалуйста сообщите об этом в issues на гитхабе")
+         print("")
+         print("---------------------------------------")
+         print("Ошибка:")
+         traceback.print_exception(exc_type, exc_value, exc_traceback, file=sys.stderr)
+         print("---------------------------------------")
+
+
+sys.excepthook = global_exception_handler
 
 print("Добро пожаловать в инструмент для управления архивами 507-zip! от 507-team")
 print("")
@@ -19,8 +36,27 @@ if choice == "1":
         print("Напишите название файла архива:")
         print("ВНИМАНИЕ!: ПОСЛЕ ЭТОГО ЕСЛИ В АРХИВЕ БЫЛИ ФАЙЛЫ КОТОРЫЕ НАЗЫВАЛИСЬ ТАКЖЕ КАК И В ЭТОЙ ДИРЕКТОРИИ ОНИ БУДУТ ПЕРЕЗАПИСАНЫ!")
         namearchiveforextract = input()
+        print(namearchiveforextract)
         print("")
         print("Список файлов в архиве:")
+
+        if  ";" in (repr(namearchiveforextract)):
+            print("СТОП! ОБНАРУЖЕНА ВОЗМОЖНАЯ ПОПЫТКА ИНЬЕКЦИИ КОМАНДЫ!")
+            print("Выход. Код: 137")
+            sys.exit(137)
+
+        if  "&&" in (repr(namearchiveforextract)):
+            print("СТОП! ОБНАРУЖЕНА ВОЗМОЖНАЯ ПОПЫТКА ИНЬЕКЦИИ КОМАНДЫ!")
+            print("Выход. Код: 137")
+            sys.exit(137)
+
+
+        if  "|" in (repr(namearchiveforextract)):
+            print("СТОП! ОБНАРУЖЕНА ВОЗМОЖНАЯ ПОПЫТКА ИНЬЕКЦИИ КОМАНДЫ!")
+            print("Выход. Код: 137")
+            sys.exit(137)
+
+
         print("------------------------------------------------------")
         os.system("unzip -l " + namearchiveforextract)
         print("------------------------------------------------------")
@@ -38,6 +74,7 @@ if choice == "1":
             os.system("mkdir " + podpapkaforextract)
             print("Папка " + podpapkaforextract + " создана!")
             print("Распаковываю....")
+            print("Нажмите Ctrl+C для отмены")
             outputofcommandinextracttwithcozdatpodpapky = os.popen("unzip -o " + namearchiveforextract + " -d " + podpapkaforextract + " 2>&1").read()
             if "bad zipfile offset" in outputofcommandinextracttwithcozdatpodpapky:
                 print("Ой.... архив поврежден!")
@@ -61,9 +98,21 @@ if choice == "1":
 
 
         if cozdatpodpapkyforextract == "n":
-            print("Окей! расспаковываю в эту директорию")
+            print("Окей! папку создавать не буду буду сюда распаковывать")
             print("Распаковываю....")
-            os.system("unzip -o -q " + namearchiveforextract)
+            outputofcommandinextractt = os.popen("unzip -o " + namearchiveforextract + " -d " + podpapkaforextract + " 2>&1").read()
+            if "bad zipfile offset" in outputofcommandinextractt:
+                print("Ой.... архив поврежден!")
+                print("")
+                print("Лог (для анализа):")
+                print("----------------------------------------------------")
+                print(outputofcommandinextractt)
+                print("----------------------------------------------------")
+                print("")
+                print("Выход")
+                print("Выход. Код: 3")
+                sys.exit(3)
             print("Распаковка завершена!")
             print("")
             print("Удачи!")
+
