@@ -11,7 +11,7 @@
 [![Python](https://img.shields.io/badge/Python-3.9+-blue?logo=python&logoColor=white)](https://www.python.org) он весит всего несколько мегабайт
 
 Этот проект был создан: 16.08.2025
-Последнее обновление: 17.08.2025
+Последнее обновление: 18.08.2025
 
 -------------------------------------------------------------------------------------------------------
 
@@ -47,7 +47,7 @@
 
 **Установка:**
 
-Для установки 507-zip надо выполнить: `wget https://github.com/ffghhjjhkhjkhjkhjkhkj/507-zip/releases/download/v1.1/507-zip && chmod +x 507-zip && sudo mv -f 507-zip /usr/bin/ && echo "Готово!"
+Для установки 507-zip надо выполнить: `wget https://github.com/ffghhjjhkhjkhjkhjkhkj/507-zip/releases/download/v1.2/507-zip && chmod +x 507-zip && sudo mv -f 507-zip /usr/bin/ && echo "Готово!"
 `
 Это скачает бинарник проекта даст ему права и распакует в /usr/bin
 
