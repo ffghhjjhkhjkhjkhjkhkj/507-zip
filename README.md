@@ -5,6 +5,8 @@
 [![Version](https://img.shields.io/badge/Version-1.2.0-red)](https://github.com/ffghhjjhkhjkhjkhjkhkj/507-zip/releases)
 [![Platform](https://img.shields.io/badge/Platform-Linux-FCC624?logo=linux)](https://linux.org)
 
+if you a english go to branch "english"
+
 -------------------------------------------------------------------------------------------------------
 **Описание:**
 Это простой но мощный архиватор на базе 
