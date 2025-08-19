@@ -15,7 +15,7 @@ def global_exception_handler(exc_type, exc_value, exc_traceback):
          if "'utf-8' codec can't decode byte" in e:
             print("Проблема с кодировкой возможно вы ввели НЕ UTF-8 символ")
             e_id = "108ФФ (ПРОБЛЕМА С КОДИРОВКОЙ)"
-         if "EOFError: EOF when reading a line" in e:
+         if "EOFError" in e:
             print("Закрытый терминал")
             e_id = "186ЛК (ЗАКРЫТЫЙ ТЕРМИНАЛ)"
          if "KeyboardInterrupt" in e:
@@ -39,7 +39,7 @@ def global_exception_handler(exc_type, exc_value, exc_traceback):
          print("TRACEBACK:")
          print(e)
          print("")
-         print("Версия 507-zip: 1.4")
+         print("Версия 507-zip: 1.5")
          print(f"Время работы 507-zip: {time.time() - start_time:.2f} сек")
          print("---------------------------------------")
          print("Пока!")
@@ -52,7 +52,7 @@ resource.setrlimit(resource.RLIMIT_AS, (1_000_000_000, 1_000_000_000))  # 1 ГБ
 
 
 
-print("Добро пожаловать в инструмент для управления архивами 507-zip! от 507-team")
+print("Добро пожаловать в инструмент для управления архивами 507-zip! от 507-team Кстати привет BISKAST!")
 print("")
 print("Выберите действие:")
 print("1: Разархивировать архив")
