@@ -2,7 +2,7 @@
 
 [![Python](https://img.shields.io/badge/Python-3.9+-blue?logo=python&logoColor=white)](https://www.python.org)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
-[![Version](https://img.shields.io/badge/Version-1.3.0-red)](https://github.com/ffghhjjhkhjkhjkhjkhkj/507-zip/releases)
+[![Version](https://img.shields.io/badge/Version-1.5.0-red)](https://github.com/ffghhjjhkhjkhjkhjkhkj/507-zip/releases)
 [![Platform](https://img.shields.io/badge/Platform-Linux-FCC624?logo=linux)](https://linux.org)
 
 if you a english go to branch "english"
@@ -47,8 +47,11 @@ if you a english go to branch "english"
 
 **Установка:**
 
-Для установки 507-zip надо выполнить: `wget https://github.com/ffghhjjhkhjkhjkhjkhkj/507-zip/releases/download/v1.4/507-zip && chmod +x 507-zip && sudo mv -f 507-zip /usr/bin/ && echo "Готово!"
+Для установки 507-zip надо выполнить: `wget https://github.com/ffghhjjhkhjkhjkhjkhkj/507-zip/releases/download/v1.5/507-zip && chmod +x 507-zip && sudo mv -f 507-zip /usr/bin/ && echo "Готово!"
 `
+Начало упаковки...
+ОБНАРУЖЕНА ИНЬЕКЦИЯ КОМАНДЫ!
+[team@archlinux 507-zip]$ 
 Это скачает бинарник проекта даст ему права и распакует в /usr/bin
 
 Для последующего запуска: `507-zip` (в любой директории)
