@@ -41,17 +41,13 @@ if you a english go to branch "english"
 **Как собрать из исходников?:**
 Что бы собрать из исходников надо выполнить следующее
 
-1.Выполнить wget https://raw.githubusercontent.com/ffghhjjhkhjkhjkhjkhkj/507-zip/refs/heads/main/main.py
-
-2.Выполнить pip install pyinstaller
-
-3.Выполнить pyinstaller --onefile main.py
+Скоро добавлю инструкцию
 
 -------------------------------------------------------------------------------------------------------
 
 **Установка:**
 
-Для установки 507-zip надо выполнить: `wget https://github.com/ffghhjjhkhjkhjkhjkhkj/507-zip/releases/download/v1.3/507-zip && chmod +x 507-zip && sudo mv -f 507-zip /usr/bin/ && echo "Готово!"
+Для установки 507-zip надо выполнить: `wget https://github.com/ffghhjjhkhjkhjkhjkhkj/507-zip/releases/download/v1.4/507-zip && chmod +x 507-zip && sudo mv -f 507-zip /usr/bin/ && echo "Готово!"
 `
 Это скачает бинарник проекта даст ему права и распакует в /usr/bin
 
