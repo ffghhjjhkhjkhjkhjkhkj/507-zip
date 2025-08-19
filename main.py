@@ -1,12 +1,12 @@
 import os
 import sys
-import traceback
-import resource
-
-resource.setrlimit(resource.RLIMIT_AS, (1_000_000_000, 1_000_000_000))  # 1 ГБ RAM
-
-
+import time
+start_time = time.time()
 def global_exception_handler(exc_type, exc_value, exc_traceback):
+         e_id = "? (НЕИЗВЕСТНАЯ ОШИБКА)"
+         print("")
+         print("")
+         print("")
          print("Ой. Извините но 507-zip словил неисправимую ошибку!")
          print("Пожалуйста сообщите об этом в issues на гитхабе")
          e = "".join(traceback.format_exception(exc_type, exc_value, exc_traceback))
@@ -14,21 +14,49 @@ def global_exception_handler(exc_type, exc_value, exc_traceback):
          print("Возможная проблема:")
          if "'utf-8' codec can't decode byte" in e:
             print("Проблема с кодировкой возможно вы ввели НЕ UTF-8 символ")
+            e_id = "108ФФ (ПРОБЛЕМА С КОДИРОВКОЙ)"
          if "EOFError: EOF when reading a line" in e:
             print("Закрытый терминал")
+            e_id = "186ЛК (ЗАКРЫТЫЙ ТЕРМИНАЛ)"
+         if "KeyboardInterrupt" in e:
+            print("Вы нажали Ctrl + C")
+            e_id = "114ДЕ (НАЖАТИЕ CTRL + C)"
          print("")
          print("---------------------------------------") 
          print("Ошибка:")
          traceback.print_exception(exc_type, exc_value, exc_traceback, file=sys.stderr)
          print("---------------------------------------")
-
-
+         print("")
+         print("ВСЕ что идет после ЭТОГО сообщения пожалуйста отправьте в issues")
+         print("")
+         print("---------------------------------------")
+         print("")
+         print("ID ОШИБКИ: " + e_id)
+         print("")
+         print("ОС:")
+         os.system("uname -a")
+         print("")
+         print("TRACEBACK:")
+         print(e)
+         print("")
+         print("Версия 507-zip: 1.4")
+         print(f"Время работы 507-zip: {time.time() - start_time:.2f} сек")
+         print("---------------------------------------")
+         print("Пока!")
 sys.excepthook = global_exception_handler
+import traceback
+import resource
+from archiving.archiving_interface import start_of_interface_in_archiving
+
+resource.setrlimit(resource.RLIMIT_AS, (1_000_000_000, 1_000_000_000))  # 1 ГБ RAM
+
+
 
 print("Добро пожаловать в инструмент для управления архивами 507-zip! от 507-team")
 print("")
 print("Выберите действие:")
 print("1: Разархивировать архив")
+print("2: Упаковать папку (BETA)")
 print("")
 choice = input()
 if choice == "1":
@@ -196,3 +224,5 @@ if choice == "1":
             print("")
             print("Удачи!")
 
+if choice == "2":
+    start_of_interface_in_archiving()
