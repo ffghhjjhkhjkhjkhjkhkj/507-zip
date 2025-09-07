@@ -47,7 +47,7 @@ if you a english go to branch "english"
 
 **Установка:**
 
-Для установки 507-zip надо выполнить: `wget https://github.com/ffghhjjhkhjkhjkhjkhkj/507-zip/releases/download/v1.5/507-zip && chmod +x 507-zip && sudo mv -f 507-zip /usr/bin/ && echo "Готово!"
+Для установки 507-zip надо выполнить: `wget https://github.com/ffghhjjhkhjkhjkhjkhkj/507-zip/releases/download/v1.5/507-zip && chmod +x 507-zip && sudo mv -f 507-zip /usr/bin/ && echo "Готово!"`
 Это скачает бинарник проекта даст ему права и распакует в /usr/bin
 
 Для последующего запуска: `507-zip` (в любой директории)
