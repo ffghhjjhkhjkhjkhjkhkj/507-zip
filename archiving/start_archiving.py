@@ -1,6 +1,5 @@
 import os
 import sys
-
 def archiving(name_archive, namefolderforzip):
     print("Начало упаковки...")
     if ";" in name_archive:
@@ -8,6 +7,22 @@ def archiving(name_archive, namefolderforzip):
         sys.exit(137)
 
     if ";" in namefolderforzip:
+        print("ОБНАРУЖЕНА ИНЬЕКЦИЯ КОМАНДЫ!")
+        sys.exit(137)
+
+    if "|" in name_archive:
+        print("ОБНАРУЖЕНА ИНЬЕКЦИЯ КОМАНДЫ!")
+        sys.exit(137)
+
+    if "|" in namefolderforzip:
+        print("ОБНАРУЖЕНА ИНЬЕКЦИЯ КОМАНДЫ!")
+        sys.exit(137)
+
+    if "&" in name_archive:
+        print("ОБНАРУЖЕНА ИНЬЕКЦИЯ КОМАНДЫ!")
+        sys.exit(137)
+
+    if "&" in namefolderforzip:
         print("ОБНАРУЖЕНА ИНЬЕКЦИЯ КОМАНДЫ!")
         sys.exit(137)
 
@@ -20,6 +35,23 @@ def archiving_tar(name_archive, namefolderforzip):
         print("ОБНАРУЖЕНА ИНЬЕКЦИЯ КОМАНДЫ!")
         sys.exit(137)
     if ";" in namefolderforzip:
+        print("ОБНАРУЖЕНА ИНЬЕКЦИЯ КОМАНДЫ!")
+        sys.exit(137)
+
+
+    if "|" in name_archive:
+        print("ОБНАРУЖЕНА ИНЬЕКЦИЯ КОМАНДЫ!")
+        sys.exit(137)
+
+    if "|" in namefolderforzip:
+        print("ОБНАРУЖЕНА ИНЬЕКЦИЯ КОМАНДЫ!")
+        sys.exit(137)
+
+    if "&" in name_archive:
+        print("ОБНАРУЖЕНА ИНЬЕКЦИЯ КОМАНДЫ!")
+        sys.exit(137)
+
+    if "&" in namefolderforzip:
         print("ОБНАРУЖЕНА ИНЬЕКЦИЯ КОМАНДЫ!")
         sys.exit(137)
     os.system("tar czf " + name_archive + ".tar.gz" " -c " + namefolderforzip)
